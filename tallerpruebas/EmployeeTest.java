@@ -36,4 +36,17 @@ public class EmployeeTest {
 		assertEquals((float) 486.0, employeetest.CalculateYearBonus());
 	}
 	
+	/*Se prueba que el valor arrojado por el metodo cs() cuando el tipo de empleado sea Worker 
+	 * 
+	 */
+	
+	@Test
+	public void CsWorkerTest() {
+		Employee employeetest=new Employee((float) 100.0, "", (float) 10.0, EmployeeType.Worker);
+		assertEquals((float) 159.33334, employeetest.cs());
+	}
+	
+	
+	
+	
 }
