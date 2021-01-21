@@ -1,6 +1,7 @@
 package tallerpruebas;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
@@ -32,7 +33,8 @@ public class Employee
         localDate = date.toInstant()
                 .atZone(ZoneId.systemDefault()).toLocalDate();
         //Obtiene el mes en forma de entero
-        int month = localDate.getMonthValue();
+        LocalDateTime now = TimeMachine.now();
+        int month = now.getMonthValue();
         // Si la moneda es USD, se considera todo el salario,
         // caso contrario se resta 5% por cambio de moneda
         if(currency == "USD"){salario = salary; }
